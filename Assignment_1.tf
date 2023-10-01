@@ -60,7 +60,7 @@ resource "aws_security_group" "example_security_group" {
 resource "aws_instance" "Myinstance" {
   ami           = "ami-03a6eaae9938c858c"
   instance_type = "t2.micro"
-#  subnet_id     = aws_subnet.public_subnet.id
+  subnet_id     = aws_subnet.public_subnet.id
   security_groups = [aws_security_group.example_security_group.name]
 
   # Root volume configuration
